@@ -1,0 +1,98 @@
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+  background-color: #23252C;
+  height: 100vh;
+  width: 100vw;
+}
+.App>div:nth-child(1){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  height: 15%;
+}
+.App>div:nth-child(1)>span{
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}
+.App>div:nth-child(2){
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 15%;
+  gap: 5%;
+  width: 50%;
+}
+.App>div:nth-child(2)>div:first-child{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 20px;
+  height: 30%;
+  padding: 20px;
+  box-shadow: 5px 5px #888888;
+}
+.App>div:nth-child(2)>div:first-child>span{
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+.App>div:nth-child(2)>div:last-child{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 20px;
+  height: 30%;
+  padding: 20px;
+  box-shadow: 5px 5px #888888;
+}
+.App>div:nth-child(2)>div:last-child>span{
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+.App>div:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  border: 5px solid white;
+  border-radius: 30px;
+  box-shadow: 10px 10px #888888;
+  height: 30%;
+  padding: 20px;
+}
+.App>div:nth-child(3)>span{
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+
+.App>div:nth-child(4){
+  display: none;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  border: 5px solid white;
+  border-radius: 30px;
+  box-shadow: 10px 10px #888888;
+  height: 30%;
+  padding: 20px;
+}
+.App>div:nth-child(4)>span{
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
