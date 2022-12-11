@@ -1,5 +1,10 @@
 import { useState,useRef } from 'react'
 import './App.css'
+import north from './images/north.svg'
+import south from './images/south.svg'
+import pause from './images/pause.svg'
+import playIcon from './images/play.svg'
+import refresh from './images/refresh.svg'
 
 let timer;
 
@@ -62,14 +67,23 @@ function App() {
 
       <div>
         <div>
-          <button onClick={() => { if (!play) if (repos > 0){setRepos(repos - 1);setTitreRepos(titreRepos-1)}}}>DecremBreak</button>
+          <button onClick={() => { if (!play) if (repos > 0){setRepos(repos - 1);setTitreRepos(titreRepos-1)}}}>
+            <img alt="" src={south} width={50} />
+          </button>
+          {/* <img alt="" src={north} width={50} onClick={()=>console.log('On veur incrementer')}  /> */}
           <span>{repos}</span>
-          <button onClick={() => { if (!play) if (repos < 30){setRepos(repos + 1);setTitreRepos(titreRepos+1) }}}>IncremBreak</button>
+          <button onClick={() => { if (!play) if (repos < 30){setRepos(repos + 1);setTitreRepos(titreRepos+1) }}}>
+            <img alt="" src={north} width={50} />
+          </button>
         </div>
         <div>
-          <button onClick={() => { if (!play){setSession(session - 1);setTitreSession(titreSession -1)}  }}>DecremSession</button>
+          <button onClick={() => { if (!play){setSession(session - 1);setTitreSession(titreSession -1)}  }}>
+          <img alt="" src={south} width={50} />
+          </button>
           <span>{session}</span>
-          <button onClick={() => { if (!play){setSession(session + 1);setTitreSession(titreSession +1)} }}>IncremSession</button>
+          <button onClick={() => { if (!play){setSession(session + 1);setTitreSession(titreSession +1)} }}>
+          <img alt="" src={north} width={50} />
+          </button>
         </div>
       </div>
 
@@ -77,13 +91,11 @@ function App() {
         <span>Session</span>
         <span>{session}:{sec}</span>
         <div>
-          <button
-            onClick={() => { setPlay(true); chrono() }}
-          >Play</button>
-          <button
-            onClick={() => { clearInterval(timer) }}
-          >
-            Pause
+          <button onClick={() => { setPlay(true); chrono() }}>
+          <img alt="" src={playIcon} width={50} />
+          </button>
+          <button onClick={() => { clearInterval(timer) }}>
+          <img alt="" src={pause} width={50} />
           </button>
           <button onClick={() => {
             setRepos(5);
@@ -91,7 +103,9 @@ function App() {
             setSec(59);
             clearInterval(timer)
             setPlay(false)
-          }}>Actualiser</button>
+          }}>
+            <img alt="" src={refresh} width={50} />
+          </button>
         </div>
       </div>
 
