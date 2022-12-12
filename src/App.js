@@ -37,7 +37,8 @@ function App() {
           setSession(session -= 1)
           setSec(sec--)
         }
-      } else {
+      } 
+      else {
         if (repos > 0) {
           afficherBreak.current.style.display = 'flex';
           afficherSession.current.style.display = 'none';
@@ -66,7 +67,7 @@ function App() {
 
       <div>
         <div>
-          <button onClick={() => { if (!play) if (repos > 0) { setRepos(repos - 1); setTitreRepos(titreRepos - 1) } }}>
+          <button onClick={() => { if (!play) if (repos > 1) { setRepos(repos - 1); setTitreRepos(titreRepos - 1) } }}>
             <img alt="" src={south} width={50} />
           </button>
           <span>{repos}</span>
@@ -75,7 +76,7 @@ function App() {
           </button>
         </div>
         <div>
-          <button onClick={() => { if (!play) if (session > 0) { setSession(session - 1); setTitreSession(titreSession - 1) } }}>
+          <button onClick={() => { if (!play) if (session > 1) { setSession(session - 1); setTitreSession(titreSession - 1) } }}>
             <img alt="" src={south} width={50} />
           </button>
           <span>{session}</span>
