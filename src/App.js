@@ -9,11 +9,11 @@ import refresh from './images/refresh.svg'
 let timer;
 
 function App() {
-  let [titreSession,setTitreSession] = useState(2)
+  let [titreSession,setTitreSession] = useState(25)
   let [titreRepos,setTitreRepos] = useState(5)
   let [repos, setRepos] = useState(5);
-  let [session, setSession] = useState(2);
-  let [sec, setSec] = useState(5);
+  let [session, setSession] = useState(25);
+  let [sec, setSec] = useState(59);
   let [play, setPlay] = useState(false)
   let afficherSession = useRef(null)
   let afficherBreak = useRef(null)
@@ -33,7 +33,7 @@ function App() {
           setSec(sec--)
         }
         else {
-          setSec(sec += 6)
+          setSec(sec += 59)
           setSession(session -= 1)
           setSec(sec--)
         }
@@ -45,7 +45,7 @@ function App() {
             setSec(sec--)
           }
           else {
-            setSec(sec += 6)
+            setSec(sec += 59)
             setRepos(repos -= 1)
             setSec(sec--)
           }
@@ -98,6 +98,8 @@ function App() {
           <img alt="" src={pause} width={50} />
           </button>
           <button onClick={() => {
+            setTitreRepos(5)
+            setTitreSession(25)
             setRepos(5);
             setSession(25);
             setSec(59);
@@ -115,19 +117,23 @@ function App() {
         <div>
           <button
             onClick={() => { setPlay(true); chrono() }}
-          >Play</button>
+          >
+            <img alt="" src={playIcon} width={50} />
+          </button>
           <button
             onClick={() => { clearInterval(timer) }}
           >
-            Pause
+            <img alt="" src={pause} width={50} />
           </button>
           <button onClick={() => {
+            setTitreRepos(5)
+            setTitreSession(25)
             setRepos(5);
             setSession(25);
             setSec(59);
             clearInterval(timer)
             setPlay(false)
-          }}>Actualiser</button>
+          }}><img alt="" src={refresh} width={50} /></button>
         </div>
       </div>
     </div>
